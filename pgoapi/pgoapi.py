@@ -186,7 +186,12 @@ class PGoApi:
                 res['responses']['lat'] = self._posf[0]
                 res['responses']['lng'] = self._posf[1]
                 f.write(json.dumps(res['responses'], indent=2))
+<<<<<<< HEAD
             self.log.info("List of Pokemon:\n" + get_inventory_data(res, self.pokemon_names) + "\nTotal Pokemon count: " + str(get_pokemon_num(res)))
+=======
+            self.log.info("\n\r" + get_inventory_data(res, self.pokemon_names))
+            self.log.info("\n\r" + get_inventory_candy(res, self.pokemon_names))
+>>>>>>> 0e08b51ca4ea20cf5f17a0f0d7b1495766761eeb
             self.log.debug(self.cleanup_inventory(res['responses']['GET_INVENTORY']['inventory_delta']['inventory_items']))
 
         self._heartbeat_number += 1
